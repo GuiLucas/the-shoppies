@@ -29,8 +29,18 @@ const AppController = () => {
 		}
 	}, [debouncedSearchQuery, searchQuery]);
 
+	//Clean up localStorage logic
+	useEffect(() => {
+		const savedNominations = JSON.parse(localStorage.getItem('nominations'));
+
+		if (savedNominations) {
+			setNominations(savedNominations);
+		}
+	}, []);
+
 	// When it reaches 5 nominations show banner
 	useEffect(() => {
+		localStorage.setItem('nominations', JSON.stringify(nominations));
 		//TODO: Implement modal instead of alert
 		if (nominations.length === 5) {
 			alert('You have nominated 5 movies!');
@@ -73,7 +83,9 @@ const AppController = () => {
 
 	let searchList;
 
-	if (searchResults.length > 0) {
+	// if (searchResults.length > 0) {
+	searchList =
+		searchResults &&
 		searchResults.map((movie) => {
 			const isNominated = nominations.some(
 				(result) => result.imdbID === movie.imdbID
@@ -89,7 +101,7 @@ const AppController = () => {
 				/>
 			);
 		});
-	}
+	// }
 
 	let nominationList;
 
