@@ -1,38 +1,40 @@
 import React, { useEffect, useState } from 'react';
-import AppHeader from '../layout/AppHeader';
+import useDebounce from '../util/UseDebounce';
+
 import MovieItem from '../movieList/MovieItem';
 import MovieList from '../movieList/MovieList';
 import NominationList from '../nominations/NominationList';
 import SearchInput from '../search/SearchInput';
-import useDebounce from '../util/UseDebounce';
 
 const AppController = () => {
 	const [searchQuery, setSearchQuery] = useState('');
 	const [searchResults, setSearchResults] = useState([]);
 	const [nominations, setNominations] = useState([]);
-	const [isSearching, setIsSearching] = useState(false);
-	const [nominationsCount, setNominationsCount] = useState(0);
 
 	const debouncedSearchQuery = useDebounce(searchQuery, 500);
 
 	useEffect(() => {
-		if (debouncedSearchQuery) {
-			setIsSearching(true);
+		//Cancel if there's no input
+		if (!searchQuery) {
+			return;
+		}
 
+		if (debouncedSearchQuery) {
 			fetchData(debouncedSearchQuery).then((data) => {
 				setSearchResults(data);
-				setIsSearching(false);
 			});
 		} else {
 			setSearchResults([]);
 		}
-	}, [debouncedSearchQuery]);
+	}, [debouncedSearchQuery, searchQuery]);
 
+	// When it reaches 5 nominations show banner
 	useEffect(() => {
-		if (nominationsCount === 5) {
+		//TODO: Implement modal instead of alert
+		if (nominations.length === 5) {
 			alert('You have nominated 5 movies!');
 		}
-	}, [nominationsCount]);
+	}, [nominations]);
 
 	const fetchData = (query) => {
 		const apiKey = 'bcba87b7';
@@ -52,20 +54,19 @@ const AppController = () => {
 
 	const handleNomination = (movie) => {
 		if (nominations.length === 5) {
-			return; // Render Banner
+			return;
 		} else if (!nominations.some((result) => result.imdbID === movie.imdbID)) {
 			setNominations([...nominations, movie]);
-			setNominationsCount(nominationsCount + 1);
+			setSearchResults([]);
+			setSearchQuery('');
 		}
 	};
 
 	const removeNomination = (movie) => {
-		console.log(movie);
 		if (nominations.some((result) => result.imdbID === movie.imdbID)) {
 			setNominations(
 				nominations.filter((result) => result.imdbID !== movie.imdbID)
 			);
-			setNominationsCount(nominationsCount - 1);
 		}
 	};
 
@@ -86,6 +87,7 @@ const AppController = () => {
 				/>
 			);
 		});
+
 	return (
 		<main>
 			<SearchInput searchQuery={searchQuery} handleSearch={handleSearch} />
