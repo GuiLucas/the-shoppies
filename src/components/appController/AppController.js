@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import useDebounce from '../util/UseDebounce';
 
+import SearchInput from '../search/SearchInput';
 import MovieItem from '../movieList/MovieItem';
 import MovieList from '../movieList/MovieList';
 import NominationList from '../nominations/NominationList';
-import SearchInput from '../search/SearchInput';
+import NominationItem from '../nominations/NominationItem';
 
 const AppController = () => {
 	const [searchQuery, setSearchQuery] = useState('');
@@ -70,8 +71,9 @@ const AppController = () => {
 		}
 	};
 
-	const searchList =
-		searchResults &&
+	let searchList;
+
+	if (searchResults.length > 0) {
 		searchResults.map((movie) => {
 			const isNominated = nominations.some(
 				(result) => result.imdbID === movie.imdbID
@@ -87,15 +89,28 @@ const AppController = () => {
 				/>
 			);
 		});
+	}
+
+	let nominationList;
+
+	if (nominations.length !== 0) {
+		nominationList = nominations.map((movie) => {
+			return (
+				<NominationItem
+					key={movie.imdbID}
+					title={movie.Title}
+					year={movie.Year}
+					removeNomination={() => removeNomination(movie)}
+				/>
+			);
+		});
+	}
 
 	return (
 		<main>
 			<SearchInput searchQuery={searchQuery} handleSearch={handleSearch} />
 			<MovieList searchQuery={searchQuery} searchList={searchList} />
-			<NominationList
-				nominations={nominations}
-				removeNomination={removeNomination}
-			/>
+			<NominationList nominationList={nominationList} />
 		</main>
 	);
 };
