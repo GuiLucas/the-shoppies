@@ -7,6 +7,8 @@ import MovieList from '../movieList/MovieList';
 import NominationList from '../nominations/NominationList';
 import NominationItem from '../nominations/NominationItem';
 
+import './AppController.css';
+
 const AppController = () => {
 	const [searchQuery, setSearchQuery] = useState('');
 	const [searchResults, setSearchResults] = useState([]);
@@ -119,7 +121,7 @@ const AppController = () => {
 	}
 
 	return (
-		<main>
+		<main className='app-controller'>
 			<SearchInput searchQuery={searchQuery} handleSearch={handleSearch} />
 			<MovieList searchQuery={searchQuery} searchList={searchList} />
 			<NominationList nominationList={nominationList} />

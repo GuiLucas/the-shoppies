@@ -1,4 +1,5 @@
 import React from 'react';
+import './MovieList.css';
 
 const MovieList = (props) => {
 	return (
@@ -9,7 +10,13 @@ const MovieList = (props) => {
 					<span>"{props.searchQuery}"</span>
 				</h2>
 			) : null}
-			<ul>{props.searchList}</ul>
+			<ul>
+				{props.searchList ? (
+					props.searchList
+				) : (
+					<li>No results for that title</li>
+				)}
+			</ul>
 		</section>
 	);
 };

@@ -10,5 +10,5 @@ const AppWrapper = () => {
 		</>
 	);
 };
-
+//TODO Add Footer
 export default AppWrapper;

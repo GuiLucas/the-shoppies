@@ -1,0 +1,17 @@
+.app-controller {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+}
+
+.app-controller .search-input {
+	grid-area: 1 / 1 / 2 / 3;
+}
+
+.app-controller .movie-list {
+	grid-area: 2 / 1 / 3 / 2;
+}
+
+.app-controller .nomination-list {
+	grid-area: 2 / 2 / 3 / 3;
+}
