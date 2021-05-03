@@ -6,8 +6,8 @@ const MovieList = (props) => {
 		<section className='movie-list'>
 			{props.searchQuery ? (
 				<h2>
-					Results for:
-					<span>"{props.searchQuery}"</span>
+					Results for
+					<span> {props.searchQuery}</span>
 				</h2>
 			) : null}
 			<ul>
