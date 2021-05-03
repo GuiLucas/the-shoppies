@@ -2,10 +2,14 @@ import React from 'react';
 
 const NominationList = (props) => {
 	return (
-		<div className='nomination-list'>
+		<section className='nomination-list'>
 			<h2>Nominations List</h2>
-			<ul>{props.nominationList}</ul>
-		</div>
+			{props.NominationList ? (
+				<ul>{props.NominationList}</ul>
+			) : (
+				<p>Nominate a movie</p>
+			)}
+		</section>
 	);
 };
 

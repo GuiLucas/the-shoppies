@@ -81,7 +81,7 @@ const AppController = () => {
 		}
 	};
 
-	let searchList;
+	let searchList = null;
 
 	// if (searchResults.length > 0) {
 	searchList =

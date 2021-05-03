@@ -2,10 +2,15 @@ import React from 'react';
 
 const MovieList = (props) => {
 	return (
-		<div className='movie-list'>
-			<h2>Results for "{props.searchQuery}"</h2>
+		<section className='movie-list'>
+			{props.searchQuery ? (
+				<h2>
+					Results for:
+					<span>"{props.searchQuery}"</span>
+				</h2>
+			) : null}
 			<ul>{props.searchList}</ul>
-		</div>
+		</section>
 	);
 };
 
