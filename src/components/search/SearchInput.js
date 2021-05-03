@@ -4,6 +4,7 @@ import './SearchInput.css';
 const SearchInput = (props) => {
 	return (
 		<section className='search-input'>
+			<h1>Nominate your favorite movies</h1>
 			<input
 				type='text'
 				placeholder='Search for a movie'

@@ -1,12 +1,21 @@
 .search-input {
-	max-width: 100rem;
-	padding: 5rem;
-	border: 1px solid gray;
+	max-width: 100%;
+	padding: 2rem;
+	padding-top: 0;
+	display: grid;
+	place-items: center;
+}
+
+.search-input > h1 {
+	margin-bottom: 1.5rem;
+	font-size: 2em;
+	color: var(--shopify-green);
 }
 
 .search-input > input {
+	font-size: 1rem;
 	text-align: start;
-	width: 100%;
+	width: 35rem;
 	height: 3.2em;
 	padding: 2rem;
 	border-radius: 0.25rem;
