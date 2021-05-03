@@ -1,8 +1,9 @@
 .app-header {
-	padding: 2rem;
-	text-align: center;
+	padding: 0.5rem;
 }
 
 .main-header {
-	color: rgb(0, 76, 63);
+	margin-left: 4rem;
+	font-size: 1.5em;
+	color: var(--shopify-color);
 }
