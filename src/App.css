@@ -4,11 +4,17 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--shopify-green: rgb(0, 76, 63);
+	--shopify-cream: rgb(251, 247, 237);
+	--text-white: rgb(255, 255, 255);
+}
+
 body {
 	font-family: 'Roboto', 'Helvetica Neue', sans-serif;
 	font-size: 16px;
 	font-weight: 1.5;
 	height: 100vh;
 	min-height: 100%;
-	background-color: rgb(251, 247, 237);
+	background-color: var(--shopify-cream);
 }
