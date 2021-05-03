@@ -1,0 +1,9 @@
+.remove-button {
+	color: var(--text-white);
+	border: none;
+	background-color: transparent;
+	font-family: inherit;
+	padding: 0.5rem;
+	cursor: pointer;
+	margin-left: 0.5rem;
+}
