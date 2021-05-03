@@ -1,4 +1,5 @@
 import React from 'react';
+import './MovieItem.css';
 
 const MovieItem = (props) => {
 	return (
@@ -6,7 +7,7 @@ const MovieItem = (props) => {
 			<li>
 				{props.title}, {props.year}
 				<button disabled={props.disabled} onClick={props.handleNomination}>
-					{props.disabled ? 'Already Nominated' : 'Nominate'}
+					Nominate
 				</button>
 			</li>
 		</>
