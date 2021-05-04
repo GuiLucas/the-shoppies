@@ -5,7 +5,11 @@ const NominationList = (props) => {
 	return (
 		<section className='nomination-list'>
 			<h2>Nominations</h2>
-			<ul>{props.nominationList}</ul>
+			{props.nominationList.length === 0 ? (
+				<h3>You don't have nominations, yet.</h3>
+			) : (
+				<ul>{props.nominationList}</ul>
+			)}
 		</section>
 	);
 };
