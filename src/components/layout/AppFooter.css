@@ -1,0 +1,14 @@
+footer {
+	text-align: right;
+	padding: 0.5em 4em;
+	font-size: 0.75em;
+}
+
+a {
+	color: var(--shopify-green);
+	text-decoration: none;
+}
+
+a:visited {
+	color: var(--shopify-green);
+}
