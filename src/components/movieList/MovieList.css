@@ -4,7 +4,7 @@
 	padding: 1rem;
 }
 
-.movie-list > ul {
+.content {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -12,9 +12,6 @@
 	margin-top: 0;
 }
 
-.movie-list > ul > li {
-	list-style: none;
-	border: 1px solid var(--text-white);
-	padding: 1rem;
-	margin: 0.5rem;
+.results-heading {
+	font-weight: 400;
 }

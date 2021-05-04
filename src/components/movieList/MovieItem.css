@@ -1,23 +1,10 @@
-button {
-	display: inline-block;
-	padding: 1em 1.8125em;
-	border-radius: 4px;
-	font-weight: 700;
+.movie-item {
+	width: 40rem;
 	font-size: 1em;
-	text-align: center;
-	cursor: pointer;
-	box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-	background-color: #008060;
-	color: #ffffff;
-	border: 1px solid transparent;
-	margin-left: 1rem;
-}
-
-button:disabled {
-	/*TODO CHANGE COLOR*/
-	background-color: gray;
-}
-
-li {
-	font-size: 1em;
+	list-style: none;
+	border: 1px solid var(--shopify-green);
+	padding: 1rem;
+	margin: 0.5rem;
+	display: flex;
+	justify-content: space-between;
 }

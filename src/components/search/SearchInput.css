@@ -7,8 +7,9 @@
 }
 
 .search-input > h1 {
-	margin-bottom: 1.5rem;
+	margin-bottom: 2rem;
 	font-size: 2em;
+	font-weight: 700;
 	color: var(--shopify-green);
 }
 
