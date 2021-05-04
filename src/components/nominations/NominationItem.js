@@ -1,14 +1,17 @@
 import React from 'react';
 import './NominationItem.css';
+import Button from '../ui/Button';
 
 const NominationItem = (props) => {
 	return (
 		<>
-			<li>
-				{props.title}, {props.year}
-				<button className='remove-button' onClick={props.removeNomination}>
-					X
-				</button>
+			<li className='nomination-item'>
+				<p>
+					{props.title} <strong>{props.year}</strong>
+				</p>
+				<Button className='remove' onClick={props.removeNomination}>
+					Remove
+				</Button>
 			</li>
 		</>
 	);
