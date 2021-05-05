@@ -6,8 +6,11 @@
 
 :root {
 	--shopify-green: rgb(0, 76, 63);
+	--button-green: rgb(0, 106, 82);
 	--shopify-cream: rgb(251, 247, 237);
 	--text-white: rgb(255, 255, 255);
+	--text-black: rgb(33, 35, 38);
+	--text-gray: rgb(107, 113, 119);
 }
 
 body {
