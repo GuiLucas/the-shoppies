@@ -4,11 +4,11 @@ import './NominationList.css';
 const NominationList = (props) => {
 	return (
 		<section className='nomination-list'>
-			<h2>Nominations</h2>
+			<h2 className='nominations-h2'>Nominations</h2>
 			{props.nominationList.length === 0 ? (
-				<h3>You don't have nominations, yet.</h3>
+				<h3 className='nominations-h3'>You don't have nominations, yet.</h3>
 			) : (
-				<ul>{props.nominationList}</ul>
+				<ul className='nominations-content'>{props.nominationList}</ul>
 			)}
 		</section>
 	);

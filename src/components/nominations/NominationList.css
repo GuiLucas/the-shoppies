@@ -8,12 +8,15 @@
 	text-align: center;
 }
 
-.nomination-list > h2 {
-	margin-bottom: 0;
+.nominations-h2 {
+	margin-bottom: 1.5rem;
 	font-size: 1.75em;
+}
+.nominations-h3 {
 	font-weight: 400;
+	font-size: 1em;
 }
 
-.nomination-list > ul {
-	padding: 1rem;
+.nominations-content {
+	padding-bottom: 1rem;
 }
