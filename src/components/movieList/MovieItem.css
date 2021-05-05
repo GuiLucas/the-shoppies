@@ -8,3 +8,8 @@
 	display: flex;
 	justify-content: space-between;
 }
+
+.movie-item-content {
+	font-size: 1em;
+	font-weight: 400;
+}

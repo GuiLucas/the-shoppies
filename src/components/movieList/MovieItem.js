@@ -6,7 +6,7 @@ const MovieItem = (props) => {
 	return (
 		<>
 			<li className='movie-item'>
-				<p>
+				<p className='movie-item-content'>
 					{props.title} <strong>{props.year}</strong>
 				</p>
 				<Button
