@@ -14,4 +14,5 @@
 
 .results-heading {
 	font-weight: 400;
+	color: var(--text-black);
 }
