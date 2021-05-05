@@ -1,4 +1,4 @@
-.search-input {
+.search {
 	max-width: 100%;
 	padding: 2rem;
 	padding-top: 0;
@@ -6,25 +6,28 @@
 	place-items: center;
 }
 
-.search-input > h1 {
+.search-heading {
 	margin-bottom: 2rem;
 	font-size: 2em;
 	font-weight: 700;
 	color: var(--shopify-green);
 }
 
-.search-input > input {
-	font-size: 1rem;
+.search-input {
+	color: var(--text-black);
+	font-size: 1em;
 	text-align: start;
-	width: 35rem;
+	width: 30rem;
+	min-width: 15.625rem;
 	height: 3.2em;
 	padding: 2rem;
 	border-radius: 0.25rem;
 	border: 1px solid transparent;
 	box-shadow: 0 0 0 1px #6b7177;
+	cursor: text;
 }
 
-.search-input > input:focus {
+.search-input:focus {
 	outline: none !important;
-	border: 1px solid rgb(0, 128, 96);
+	border: 1px solid var(--shopify-green);
 }
