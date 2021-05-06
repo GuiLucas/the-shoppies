@@ -4,7 +4,7 @@ import './Button.css';
 const Button = (props) => {
 	return (
 		<button
-			className={props.className}
+			className={`default-button ${props.buttonType}`}
 			onClick={props.onClick}
 			disabled={props.disabled}
 		>
