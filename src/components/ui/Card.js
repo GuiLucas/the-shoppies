@@ -9,7 +9,7 @@ const Card = (props) => {
 				{props.title} <strong>{props.year}</strong>
 			</p>
 			<Button
-				className={props.buttonType}
+				buttonType={props.buttonType}
 				disabled={props.disabled}
 				onClick={props.onClick}
 			>
