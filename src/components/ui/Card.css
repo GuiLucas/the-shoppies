@@ -1,0 +1,23 @@
+.card {
+	width: 35rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 0.25rem;
+	padding: 1rem;
+	margin: 0.5rem;
+	list-style: none;
+}
+
+.card-content {
+	font-size: 1em;
+	font-weight: 400;
+}
+
+.movie-item {
+	border: 1px solid var(--shopify-green);
+}
+
+.nomination-item {
+	border: 1px solid var(--text-white);
+}
