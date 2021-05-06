@@ -12,6 +12,7 @@
 	border: 1px solid transparent;
 	margin-left: 1rem;
 	float: right;
+	height: fit-content;
 }
 
 .remove:hover {
@@ -31,6 +32,7 @@
 	border: 1px solid transparent;
 	margin-left: 1rem;
 	float: right;
+	height: fit-content;
 }
 
 .nominate:disabled {
