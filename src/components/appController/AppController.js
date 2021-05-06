@@ -14,7 +14,6 @@ import Card from '../ui/Card';
 import './AppController.css';
 
 const AppController = () => {
-	const [isSearching, setIsSearching] = useState(false);
 	const [searchQuery, setSearchQuery] = useState('');
 	const [searchResults, setSearchResults] = useState([]);
 	const [nominations, setNominations] = useState([]);
@@ -23,8 +22,14 @@ const AppController = () => {
 	const debouncedSearchQuery = useDebounce(searchQuery, 500);
 
 	useEffect(() => {
-		setIsSearching(true);
+		const savedNominations = JSON.parse(localStorage.getItem('nominations'));
 
+		if (savedNominations) {
+			setNominations(savedNominations);
+		}
+	}, []);
+
+	useEffect(() => {
 		if (!searchQuery) {
 			return;
 		}
@@ -32,20 +37,11 @@ const AppController = () => {
 		if (debouncedSearchQuery) {
 			fetchMovies(debouncedSearchQuery).then((data) => {
 				setSearchResults(data);
-				setIsSearching(false);
 			});
 		} else {
 			setSearchResults([]);
 		}
 	}, [debouncedSearchQuery, searchQuery]);
-
-	useEffect(() => {
-		const savedNominations = JSON.parse(localStorage.getItem('nominations'));
-
-		if (savedNominations) {
-			setNominations(savedNominations);
-		}
-	}, []);
 
 	useEffect(() => {
 		localStorage.setItem('nominations', JSON.stringify(nominations));
@@ -158,7 +154,7 @@ const AppController = () => {
 		<main className='app-controller'>
 			<SearchInput searchQuery={searchQuery} handleSearch={handleSearch} />
 
-			{!searchList && !isSearching ? (
+			{!searchList && debouncedSearchQuery ? (
 				<h2 className='no-results'>There's no results for {searchQuery}</h2>
 			) : null}
 
