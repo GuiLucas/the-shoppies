@@ -1,7 +1,11 @@
 import React from 'react';
+
+//	Components
 import AppController from '../appController/AppController';
 import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
+
+//	Styling
 import './AppWrapper.css';
 
 const AppWrapper = () => {
@@ -13,5 +17,5 @@ const AppWrapper = () => {
 		</div>
 	);
 };
-//TODO Add Footer
+
 export default AppWrapper;
