@@ -39,7 +39,7 @@
 	cursor: default;
 }
 
-.nominate:hover {
+.nominate:hover:enabled {
 	background-color: var(--shopify-green);
 }
 
