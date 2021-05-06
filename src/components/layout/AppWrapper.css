@@ -1,0 +1,7 @@
+.wrapper {
+	height: 100vh;
+	display: grid;
+	align-items: stretch;
+}
+
+/*Maybe delete this*/
