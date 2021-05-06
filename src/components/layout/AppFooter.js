@@ -4,9 +4,9 @@ import './AppFooter.css';
 const AppFooter = () => {
 	return (
 		// prettier-ignore
-		<footer>
-			<p>
-				Made by <a href='https://github.com/GuiLucas' target='_blank' rel='noreferrer'>
+		<footer className='footer'>
+			<p className='footer-content'>
+				Made by <a className='footer-link' href='https://github.com/GuiLucas' target='_blank' rel='noreferrer'>
 					Guilherme Lucas
 				</a>
 				.

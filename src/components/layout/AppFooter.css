@@ -1,14 +1,15 @@
-footer {
+.footer {
 	text-align: right;
 	padding: 0.5em 4em;
 	font-size: 0.75em;
+	color: var(--text-black);
 }
 
-a {
-	color: var(--shopify-green);
+.footer-link {
+	color: var(--button-green);
 	text-decoration: none;
 }
 
-a:visited {
+.footer-link:visited {
 	color: var(--shopify-green);
 }
