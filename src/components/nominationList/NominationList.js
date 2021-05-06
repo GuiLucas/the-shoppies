@@ -13,5 +13,5 @@ const NominationList = (props) => {
 		</section>
 	);
 };
-//TODO add connditional statement when nomination List is empty send message
+
 export default NominationList;
