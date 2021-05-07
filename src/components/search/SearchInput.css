@@ -31,3 +31,19 @@
 	outline: none !important;
 	border: 1px solid var(--shopify-green);
 }
+
+@media only screen and (max-width: 480px) {
+	.search {
+		padding: 1rem;
+		text-align: center;
+	}
+
+	.search-input {
+		max-width: 15rem;
+		padding: 1rem;
+	}
+
+	.search-heading {
+		font-size: 1.5em;
+	}
+}

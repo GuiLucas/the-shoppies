@@ -4,4 +4,9 @@
 	align-items: stretch;
 }
 
-/*Maybe delete this*/
+@media only screen and (max-width: 480px) {
+	.wrapper {
+		display: grid;
+		place-items: center;
+	}
+}

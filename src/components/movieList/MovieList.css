@@ -16,3 +16,17 @@
 	font-weight: 400;
 	color: var(--text-black);
 }
+
+@media only screen and (max-width: 480px) {
+	.movie-list {
+		padding: 0.5rem;
+	}
+
+	.content {
+		padding: 0.5rem;
+	}
+
+	.results-heading {
+		font-size: 1.25em;
+	}
+}

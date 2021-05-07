@@ -37,3 +37,9 @@
 .nominate:hover:enabled {
 	background-color: var(--shopify-green);
 }
+
+@media only screen and (max-width: 480px) {
+	.default-button {
+		font-size: 0.9em;
+	}
+}

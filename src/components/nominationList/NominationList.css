@@ -2,9 +2,10 @@
 	background-color: var(--shopify-green);
 	color: var(--text-white);
 	display: grid;
-	justify-items: center;
+	justify-content: center;
 	padding: 2rem 0;
 	text-align: center;
+	width: 100%;
 }
 
 .nominations-h2 {
@@ -18,4 +19,14 @@
 
 .nominations-content {
 	padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 480px) {
+	.nomination-list {
+		place-items: center;
+	}
+
+	.nominations-content {
+		padding: 0.5rem;
+	}
 }

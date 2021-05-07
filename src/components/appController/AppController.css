@@ -4,3 +4,14 @@
 	font-weight: 400;
 	color: var(--text-black);
 }
+
+@media only screen and (max-width: 480px) {
+	.app-controller {
+		display: grid;
+		place-items: center;
+	}
+
+	.no-results {
+		font-size: 1.25em;
+	}
+}

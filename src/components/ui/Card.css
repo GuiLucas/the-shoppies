@@ -21,3 +21,11 @@
 .nomination-item {
 	border: 1px solid var(--text-white);
 }
+
+@media only screen and (max-width: 480px) {
+	.card {
+		max-width: 20rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
