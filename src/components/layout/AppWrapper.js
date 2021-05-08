@@ -6,11 +6,11 @@ import AppHeader from './AppHeader';
 import AppFooter from './AppFooter';
 
 //	Styling
-import './AppWrapper.css';
+import styles from './AppWrapper.module.css';
 
 const AppWrapper = () => {
 	return (
-		<div className='wrapper'>
+		<div className={styles.wrapper}>
 			<AppHeader />
 			<AppController />
 			<AppFooter />

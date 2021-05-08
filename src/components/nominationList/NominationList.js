@@ -1,14 +1,16 @@
 import React from 'react';
-import './NominationList.css';
+import styles from './NominationList.module.css';
 
 const NominationList = (props) => {
 	return (
-		<section className='nomination-list'>
-			<h2 className='nominations-h2'>Nominations</h2>
+		<section className={styles.nominationList}>
+			<h2 className={styles.nominationsH2}>Nominations</h2>
 			{props.nominationList.length === 0 ? (
-				<h3 className='nominations-h3'>You don't have nominations, yet.</h3>
+				<h3 className={styles.nominationsH3}>
+					You don't have nominations, yet.
+				</h3>
 			) : (
-				<ul className='nominations-content'>{props.nominationList}</ul>
+				<ul className={styles.nominationsContent}>{props.nominationList}</ul>
 			)}
 		</section>
 	);

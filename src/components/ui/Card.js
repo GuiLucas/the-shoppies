@@ -1,11 +1,11 @@
 import React from 'react';
 import Button from './Button';
-import './Card.css';
+import styles from './Card.module.css';
 
 const Card = (props) => {
 	return (
-		<li className={`card ${props.listType}`}>
-			<p className='card-content'>
+		<li className={styles[props.listType]}>
+			<p className={styles.cardContent}>
 				{props.title} <strong>{props.year}</strong>
 			</p>
 			<Button

@@ -1,15 +1,15 @@
-.app-header {
+.appHeader {
 	padding: 0.5rem;
 }
 
-.main-header {
+.mainHeader {
 	margin-left: 4rem;
 	font-size: 1.5em;
 	color: var(--text-black);
 }
 
 @media only screen and (max-width: 480px) {
-	.main-header {
+	.mainHeader {
 		text-align: center;
 		margin-left: 0;
 	}

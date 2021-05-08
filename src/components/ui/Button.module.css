@@ -1,4 +1,4 @@
-.default-button {
+.defaultButton {
 	padding: 1em 1.8125em;
 	border-radius: 4px;
 	font-weight: 700;
@@ -16,6 +16,7 @@
 }
 
 .remove {
+	composes: defaultButton;
 	color: var(--shopify-green);
 	background-color: var(--text-white);
 }
@@ -25,6 +26,7 @@
 }
 
 .nominate {
+	composes: defaultButton;
 	color: var(--text-white);
 	background-color: var(--button-green);
 }
@@ -39,7 +41,7 @@
 }
 
 @media only screen and (max-width: 480px) {
-	.default-button {
+	.defaultButton {
 		font-size: 0.9em;
 	}
 }

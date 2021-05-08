@@ -1,12 +1,12 @@
 import React from 'react';
 
-import './Modal.css';
+import styles from './Modal.module.css';
 
 const Modal = (props) => {
 	return (
-		<div className='modal'>
-			<div className='modal-content'>
-				<p className='text-info'>{props.info}</p>
+		<div className={styles.modal}>
+			<div className={styles.modalContent}>
+				<p className={styles.textInfo}>{props.info}</p>
 			</div>
 		</div>
 	);

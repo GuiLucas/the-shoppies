@@ -5,11 +5,11 @@
 	color: var(--text-black);
 }
 
-.footer-link {
+.footerLink {
 	color: var(--button-green);
 	text-decoration: none;
 }
 
-.footer-link:visited {
+.footerLink:visited {
 	color: var(--shopify-green);
 }

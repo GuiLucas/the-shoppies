@@ -11,7 +11,7 @@ import Modal from '../ui/Modal';
 import Card from '../ui/Card';
 
 //	Styling
-import './AppController.css';
+import styles from './AppController.module.css';
 
 const AppController = () => {
 	const [searchQuery, setSearchQuery] = useState('');
@@ -124,7 +124,7 @@ const AppController = () => {
 					year={movie.Year}
 					disabled={isNominated || nominationComplete}
 					onClick={() => handleNomination(movie)}
-					listType={'movie-item'}
+					listType={'movieItem'}
 					buttonType={'nominate'}
 					buttonContent={isNominated ? 'Nominated' : 'Nominate'}
 				/>
@@ -142,7 +142,7 @@ const AppController = () => {
 					title={movie.Title}
 					year={movie.Year}
 					onClick={() => removeNomination(movie)}
-					listType={'nomination-item'}
+					listType={'nominationItem'}
 					buttonType={'remove'}
 					buttonContent={'Remove'}
 				/>
@@ -151,11 +151,13 @@ const AppController = () => {
 	}
 
 	return (
-		<main className='app-controller'>
+		<main className={styles.AppController}>
 			<SearchInput searchQuery={searchQuery} handleSearch={handleSearch} />
 
 			{!searchList && debouncedSearchQuery ? (
-				<h2 className='no-results'>There's no results for {searchQuery}</h2>
+				<h2 className={styles.noResults}>
+					There's no results for {searchQuery}
+				</h2>
 			) : null}
 
 			{searchList && (

@@ -1,4 +1,4 @@
-.no-results {
+.noResults {
 	text-align: center;
 	padding-bottom: 2rem;
 	font-weight: 400;
@@ -6,12 +6,12 @@
 }
 
 @media only screen and (max-width: 480px) {
-	.app-controller {
+	.appController {
 		display: grid;
 		place-items: center;
 	}
 
-	.no-results {
+	.noResults {
 		font-size: 1.25em;
 	}
 }

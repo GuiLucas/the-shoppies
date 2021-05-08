@@ -1,12 +1,12 @@
 import React from 'react';
-import './AppFooter.css';
+import styles from './AppFooter.module.css';
 
 const AppFooter = () => {
 	return (
 		// prettier-ignore
-		<footer className='footer'>
-			<p className='footer-content'>
-				Made by <a className='footer-link' href='https://github.com/GuiLucas' target='_blank' rel='noreferrer'>
+		<footer className={styles.footer}>
+			<p>
+				Made by <a className={styles.footerLink} href='https://github.com/GuiLucas' target='_blank' rel='noreferrer'>
 					Guilherme Lucas
 				</a>
 				.

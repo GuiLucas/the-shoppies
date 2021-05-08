@@ -9,23 +9,25 @@
 	list-style: none;
 }
 
-.card-content {
+.cardContent {
 	font-size: 1em;
 	font-weight: 400;
 }
 
-.movie-item {
+.movieItem {
+	composes: card;
 	border: 1px solid var(--shopify-green);
 }
 
-.nomination-item {
+.nominationItem {
+	composes: card;
 	border: 1px solid var(--text-white);
 }
 
 @media only screen and (max-width: 480px) {
 	.card {
 		max-width: 20rem;
-		flex-wrap: wrap;
+		flex-direction: column;
 		justify-content: center;
 	}
 }
